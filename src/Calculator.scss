@@ -1,0 +1,92 @@
+$color1: #8c38ff;
+$color2: #8c38ff;
+$color3: black;
+
+
+.button {
+    flex: 1 1 33.333%;
+    background-color: $color3;
+    appearance: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        border: 1px;
+
+
+
+    }
+
+}
+
+.calculator-component {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+    display: flex;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .calculator-page {
+        border-color: #8c38ff;
+        width: 100%;
+        margin-top: 50px;
+        max-width: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0px 2px 18px #8c38ff;
+
+
+        .display1 {
+            width: auto;
+            background-color: #8c38ff;
+            color: white;
+            text-align: center;
+
+
+
+        }
+
+        .display {
+            padding: 16px;
+            text-align: right;
+            background-color: $color3;
+            color: white;
+            font-size: 24px;
+            font-weight: 300;
+
+
+
+        }
+
+        .operators {
+            display: flex;
+
+            button {
+                @extend .button;
+                background-color: $color1;
+            }
+
+
+        }
+
+        .digits {
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+                @extend .button;
+            }
+
+
+        }
+    }
+}
